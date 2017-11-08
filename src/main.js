@@ -16,20 +16,22 @@ Vue.use(Mint);
 //导入mui的css样式
 import '../static/mui/js/mui.js';
 import '../static/mui/css/mui.css';
+
 //导入全局css样式，要在所有的css样式后面，否则会被覆盖
 import '../static/css/appvue.css';
+
 //路由绑定
 import vueResource from 'vue-resource';
 Vue.use(vueResource);
 
 
 //日期格式化 moment.js
-// import moment from 'moment';
-// Vue.use(moment);
-// //定义全局过滤器
-// Vue.filter('datafmt',function(input,datestr){
-//   return moment()
-// })
+import moment from 'moment';
+Vue.use(moment);
+//定义全局过滤器
+Vue.filter('datafmt',function(input,datestr){
+  return moment(input).format(datestr);
+})
 
 /* eslint-disable no-new */
 new Vue({

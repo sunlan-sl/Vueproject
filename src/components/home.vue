@@ -42,7 +42,8 @@
 <script>
 import Vue from 'vue'  //导入Vue核心包
 import { Toast } from 'mint-ui';
-
+//import './common';
+import  common from '../common.js';
     export default {
         data(){
             return {
@@ -54,7 +55,7 @@ import { Toast } from 'mint-ui';
         },
         methods:{
            getList(){
-                this.$http.get('http://vue.studyit.io/api/getlunbo').then(function(res){
+                this.$http.get(common.temurl+'/api/getlunbo').then(function(res){
                         if(res.body.status !=0){
                                 Toast({
                                         message: res.body.message,

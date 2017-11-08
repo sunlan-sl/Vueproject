@@ -8,7 +8,7 @@
 							{{item.title}}
 							<p class="mui-ellipsis">{{item.zhaiyao}}</p>
 							<div class="ft">
-								<span class="date">发表时间:{{item.add_time}}</span>
+								<span class="date">发表时间:{{item.add_time | datafmt("YYYY-MM-DD HH:mm:ss")}}</span>
 								<span class="click">点击数:{{item.click}}</span>
 							</div>
 						</div>
@@ -19,7 +19,7 @@
 	</div>
 </template>
 <script>
- 
+ import common from '../../common.js'
     export default {
         data(){
             return {
@@ -31,7 +31,7 @@
         },
         methods:{
             getdata(){
-                 this.$http.get('http://vue.studyit.io/api/getnewslist').then(function(res){
+                 this.$http.get(common.temurl+'/api/getnewslist').then(function(res){
 					 if(res.body.status != 0){
 						 alert(res.body.message);
 						 return;
