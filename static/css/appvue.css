@@ -1,0 +1,10 @@
+body {
+    background-color: #fff;
+}
+.mui-active {
+    color: #007aff;
+}
+#temp1 {
+    margin-top: 40px;
+    margin-bottom: 55px;
+}
