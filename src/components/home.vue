@@ -40,9 +40,8 @@
 </template>
 
 <script>
-import Vue from 'vue'  //导入Vue核心包
+//import Vue from 'vue'  //导入Vue核心包
 import { Toast } from 'mint-ui';
-//import './common';
 import  common from '../common.js';
     export default {
         data(){

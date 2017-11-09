@@ -7,10 +7,13 @@
         <div class="content">
             <p v-html="list.content"></p>
         </div>
+        <!-- 评论组件 -->  
+        <comment :id="id"> </comment>
 	</div>
 </template>
 <script>
-  import common from '../../common.js'
+  import common from '../../common.js';   //这里导入的是公共的URL
+  import comment from '../subcom/comment.vue';    //导入comment评论子组件
     export default {
         data(){
             return {
@@ -32,6 +35,9 @@
                     this.list = res.body.message[0];
                 })
             }
+        },
+        components:{
+            comment,     //引入评论组件，对象的es6简写
         }
        
     };
