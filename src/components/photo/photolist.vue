@@ -78,6 +78,8 @@
     color:#0094ff;
     float: left;
     margin-right: 10px;
+    cursor: pointer;
+
 }
 #catelist ul {
     padding: 0;
